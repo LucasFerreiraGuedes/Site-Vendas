@@ -16,7 +16,7 @@ namespace Vendas.Models
 
         [Required(ErrorMessage = "Favor informar a descrição da Categoria")]
         [StringLength(200,ErrorMessage = " O tamanho máximo da descrição é 200 caracteres")]
-        [Display(Name = "nome")]
+        [Display(Name = "Descrição")]
         public string Descricao { get; set; }
 
         public List<Jogo> Jogos { get; set; }
