@@ -1,5 +1,6 @@
-﻿using LanchesMac.Context;
+﻿
 using Microsoft.EntityFrameworkCore;
+using Vendas.Context;
 
 namespace LanchesMac;
 public class Startup
