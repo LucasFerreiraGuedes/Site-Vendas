@@ -2,6 +2,7 @@
 using Vendas.Repository;
 using Vendas.Repository.Interfaces;
 using Vendas.Models;
+using Vendas.ViewModels;
 
 namespace Vendas.Controllers
 {
@@ -17,8 +18,13 @@ namespace Vendas.Controllers
 
         public IActionResult List()
         {
-            var Jogos = _jogoRepository.Jogos;
-            return View(Jogos);
+            //var Jogos = _jogoRepository.Jogos;
+            //return View(Jogos);
+
+            var jogosList = new JogosListViewModel();
+            jogosList.Jogos = _jogoRepository.Jogos;
+            jogosList.CategoriaAtual = "Categoria Atual";
+            return View(jogosList);
         }
     }
 }

@@ -1,12 +1,16 @@
-﻿@model IEnumerable<Vendas.Models.Jogo>
+﻿@model JogosListViewModel
 
 	<div>
 		<h2>
-			Todos os jogos
+			@Model.CategoriaAtual
 		</h2>
 	</div>
 
-	@foreach (var jogos in Model){
+	<div class= "container-fluid">
+	<div class="row">
+	@foreach (var jogos in Model.Jogos)
+	{
+	<div class="col-sm-4 col-md-4 col-lg-4">
 	<div class="card" style="width: 18rem;">
 		<img src="..." class="card-img-top" alt="...">
 		<div class="card-body">
@@ -14,14 +18,17 @@
 			<p class="card-text">@jogos.DescricaoCurta</p>
 		</div>
 		<ul class="list-group list-group-flush">
-			<li class="list-group-item">@jogos.Categoria</li>
-			<li class="list-group-item">@jogos.Preco</li>
-			<li class="list-group-item">@jogos.JogoPreferido</li>
+			<li class="list-group-item">Plataforma: @jogos.Categoria.CategoriaNome</li>
+			<li class="list-group-item">Preço: @jogos.Preco</li>
+			<li class="list-group-item">Preferido da Galera? @jogos.JogoPreferido</li>
 		</ul>
 		<div class="card-body">
 			<a href="#" class="card-link">Card link</a>
 			<a href="#" class="card-link">Another link</a>
 		</div>
 	</div>
+	</div>
 		
 	}
+	</div>
+</div>
