@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Data Source=DESKTOP-T6DH5FC;Initial Catalog=JogosDatabase;Integrated Security=True"));
 
 builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
-builder.Services.AddTransient<IJogoRepository, JogoRepository>();
+builder.Services.AddTransient<IJogosRepository, JogoRepository>();
 
 var app = builder.Build();
 

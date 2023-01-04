@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Vendas.Models.Jogo>
+
+	<div>
+		<h2>
+			Todos os jogos
+		</h2>
+	</div>
+
+	@foreach (var jogos in Model){
+	<div class="card" style="width: 18rem;">
+		<img src="..." class="card-img-top" alt="...">
+		<div class="card-body">
+			<h5 class="card-title">@jogos.Nome</h5>
+			<p class="card-text">@jogos.DescricaoCurta</p>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">@jogos.Categoria</li>
+			<li class="list-group-item">@jogos.Preco</li>
+			<li class="list-group-item">@jogos.JogoPreferido</li>
+		</ul>
+		<div class="card-body">
+			<a href="#" class="card-link">Card link</a>
+			<a href="#" class="card-link">Another link</a>
+		</div>
+	</div>
+		
+	}
