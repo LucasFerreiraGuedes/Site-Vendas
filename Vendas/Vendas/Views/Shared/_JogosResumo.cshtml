@@ -1,4 +1,20 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Jogo
+
+<div class="col-sm-4 col-md-4 col-lg-4">
+	<div class="card" style="width: 18rem;">
+		<img src="..." class="card-img-top" alt="...">
+		<div class="card-body">
+			<h5 class="card-title">@Model.Nome</h5>
+			<p class="card-text">@Model.DescricaoCurta</p>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">Plataforma: @Model.Categoria.CategoriaNome</li>
+			<li class="list-group-item">Preço: @Model.Preco</li>
+			<li class="list-group-item">Preferido da Galera? @Model.JogoPreferido</li>
+		</ul>
+		<div class="card-body">
+			<a href="#" class="card-link">Card link</a>
+			<a href="#" class="card-link">Another link</a>
+		</div>
+	</div>
+</div>

@@ -14,5 +14,7 @@ namespace Vendas.Context
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Jogo> Jogos { get; set; }
 
+        public DbSet<CarrinhoCompraItem> CarrinhoCompraItens { get; set; }
+
     }
 }
